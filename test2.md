@@ -1,5 +1,3 @@
-html header: <script type="text/javascript"  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 #Mark Down
 Mark down 이라는 툴을 아주 쉽게 배워 보도록 하겠습니다.
 
@@ -26,14 +24,15 @@ http://www.hallym.ac.kr
 >인용을 한번 해보도록 하죠. 아주 쉽게 진행할 수 있습니다. 개행을 해도 인용이 그대로 적용된다고 하니 더 편하겠죠
 
 
-   
-	#include "stdio.h"
-	
-	int main(int argc, char const *argv[])
-	{
-		/* code */
-		return 0;
-	}
+```   
+#include "stdio.h"
+
+int main(int argc, char const *argv[])
+{
+	/* code */
+	return 0;
+}
+```
 
 위와 같이 코드 `printf` 함수를 작성하고 실행을 해봅니다.
 
@@ -49,17 +48,17 @@ http://www.hallym.ac.kr
 
 \\({e}^{i\pi}+1=0\\)
 
+<p>$ x $에 관한 이차방정식 $ ax^2 + bx + c = 0 $의 해는 다음과 같다.</p>
+<p>$$ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} $$</p>
+
+
 
 ##이미지작업
 ###기본코드
 
-![](http://www.hallym.ac.kr/images/common/hallym_logo.gif)
-
 ###로컬이미지
 
-![](Img1120016.png)
-
-![](./Img1120016.png)
+![](Img1120097.png)
 
 이게 C: 부터 경로를 읽을 수 없고 본인이 있는 폴더를 기준으로 움직이네요
 
@@ -67,7 +66,7 @@ http://www.hallym.ac.kr
 ###이미지의 크기를 줄이자
 md 에는 이미지크기를 줄이는 기능이 없네 외부의 도움이 필요할듯
 
-<img src="./Img1120016.png" width="200">
+<img src="img/Img1120097.png" width="200">
 
 그냥 html 코드를 바로 삽입하는 방법
 
@@ -78,3 +77,25 @@ CSS 파일의 도움을 받는 방법
 ###다른 페이지 이동
 
 [test3](test3.md)
+
+
+###테이블
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+
+| Name | Description          |
+| ------------- | ----------- |
+| Help      | ~~Display~~ the help window.|
+| Close     | Closes a window|
+
+정렬도 가능하지요
+
+| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
